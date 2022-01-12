@@ -1,0 +1,34 @@
+body{font-family: 'Roboto', sans-serif;font-size:18px}
+header{display:table;width:100%;background-color:#fff;display:flex;align-items:center;justify-content:center;}
+h1{font-family:'Paytone One',sans-serif;padding:20px 0 0 6px;text-align:center;color:#3A9AFF;font-weight:bold;font-size:2.5em;margin:.75rem 0 2rem 0;text-shadow:2px 2px silver;display:table-cell;vertical-align:middle;}
+fieldset {margin-bottom: 15px!important;}
+legend{margin:10px 0 0 0;font-size: 1.5rem;border-bottom:none;font-weight:bold;font-family: 'Roboto', sans-serif!important;}
+label{margin-bottom: 0}
+option {font-family: 'Roboto', sans-serif!important}
+select {font-family: inherit !important}
+li {list-style: none;}
+hr{margin:1.5rem 0 3rem 0}
+.ui-tabs .ui-tabs-nav li {margin: 4px 4px 0 0;}
+.callout-column{border: 1px solid #CECECE; margin: 10px 0;border-radius: 4px;}
+.callout-img{border-top-right-radius: 4px;border-top-left-radius: 4px;}
+.card-content{margin-top: 0; padding: 0 1em;}
+.title{margin-top: .75rem;}
+.desc{font-size: 1em; margin:0}
+.detail{font-size: .9em;margin:0 0 10px 0}
+.search{margin-top:20px;float:none;}
+.filter{display: inline-block;float:none;}
+.nobot{margin-bottom:-10px;}
+.blue{color:#51A1F5;}
+.color_page a, .active_class a {background-color: #51A1F5!important;color:#FFF!important; padding:4px;}
+.pagination a {padding: 4px;}
+.box {margin-top:-20px;}
+.callout-column{margin: 0 15px 15px 0 !important}
+.oval {width:160px;height:80px;background-color:#51A1F5;border-radius:40px;padding:1.5px 3.5px;color:#fff}
+.nonzero {background-color: #00C000}
+.zero {background-color: #ff0000;}
+.hidden{visibility: hidden;}
+.selects{font-size:14px!important;}
+.btn{display:inline;font-family: 'Roboto', sans-serif; font-size: 16px; padding: 8px 10px; margin-top: 0; color: #fff; background-color: #51A1F5; -webkit-transition: all 1s; -o-transition: all 1s; transition: all 1s; border: 0; border-radius: 0;}
+#reset{margin-left:5px;display:inline-block;}
+#err{color:red;text-align:center;font-weight: bold;}
+#total{font-size:18px;}
