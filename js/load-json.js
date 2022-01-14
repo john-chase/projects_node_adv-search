@@ -63,17 +63,24 @@ function appendData(data, msg, mainContainer) {
         const type=data.response[i].type;
         const explorer=data.response[i].explorer;
         let temp = url.split("/", -1);
-        expDir=temp[temp.length-2]
-        console.log(temp[temp.length-2], expDir[expDir.length-2])
+        const expDir=temp[temp.length-2];
+        let imgPath
+        if(location.hostname == "artoftech") {
+            imgPath=domain+'/projects/node/advanced-search/images/'+expDir+'/expedition-header.jpg';
+        } else {
+            imgPath=domain+'/node/advanced-search/images/'+expDir+'/expedition-header.jpg';
+        }
+        const linkPath=noaa+url;
+        console.log(linkPath)
         divInner += ' \
             <li id="col-'+i+'">';
             // '+theH3+' \
             divInner += ' \<div class="callout-column"> \
-                    <a class="callout" href="'+noaa+url+'" title="'+title+'" target="_blank"> \
-                        <img class="callout-img" src="'+domain+'/projects/advanced-search/images/'+expDir+'/expedition-header.jpg" width="100%" height="100%" /> \
+                    <a class="callout" href="'+linkPath+'" title="'+title+'" target="_blank"> \
+                        <img class="callout-img" src="'+imgPath+'" width="100%" height="100%" /> \
                     </a> \
                     <div class="card-content"> \
-                        <h3 class="title"><a href="'+noaa+url+'" title="'+title+'" target="_blank">'+title+'</a></h3> \
+                        <h3 class="title"><a href="'+linkPath+'" title="'+title+'" target="_blank">'+title+'</a></h3> \
                         <p class="desc"><strong>Year</strong>: <span class="detail">'+year+'</span></p> \
                         <p class="desc"><strong>Type</strong>: <span class="detail">'+type+'</span></p> \
                         <p class="desc"><strong>Location</strong>: <span class="detail">'+data.response[i].loc+'</span></p> \
@@ -138,7 +145,7 @@ async function translate2Eng(qryStr) {
                 break;
         }
     }
-    engQry.innerHTML = english;
+    if(engQry) engQry.innerHTML = english;
 }
 
 //Convert ids to values
@@ -154,7 +161,6 @@ async function fetchLookupValues(table, ids) {
             for(let i=0;i<data.response.length;i++) {
                 if(i!==data.response.length-1){values+=data.response[i].loc+", or the "} else {values+=data.response[i].loc}
             }
-            return values;
             return data.response[0].loc
             break;
         case "Topics":

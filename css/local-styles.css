@@ -1,4 +1,4 @@
-body{font-family: 'Roboto', sans-serif;font-size:18px}
+body{font-family: 'Roboto', sans-serif;font-size:18px;overflow:scroll;margin-bottom:12rem;}
 header{display:table;width:100%;background-color:#fff;display:flex;align-items:center;justify-content:center;}
 h1{font-family:'Paytone One',sans-serif;padding:20px 0 0 6px;text-align:center;color:#3A9AFF;font-weight:bold;font-size:2.5em;margin:.75rem 0 2rem 0;text-shadow:2px 2px silver;display:table-cell;vertical-align:middle;}
 fieldset {margin-bottom: 15px!important;}
@@ -15,7 +15,7 @@ hr{margin:1.5rem 0 3rem 0}
 .title{margin-top: .75rem;}
 .desc{font-size: 1em; margin:0}
 .detail{font-size: .9em;margin:0 0 10px 0}
-.search{margin-top:20px;float:none;}
+.search{margin-top:20px;float:none;margin-bottom: 1rem;}
 .filter{display: inline-block;float:none;}
 .nobot{margin-bottom:-10px;}
 .blue{color:#51A1F5;}
@@ -27,8 +27,23 @@ hr{margin:1.5rem 0 3rem 0}
 .nonzero {background-color: #00C000}
 .zero {background-color: #ff0000;}
 .hidden{visibility: hidden;}
+.visible{visibility: visible;}
 .selects{font-size:14px!important;}
 .btn{display:inline;font-family: 'Roboto', sans-serif; font-size: 16px; padding: 8px 10px; margin-top: 0; color: #fff; background-color: #51A1F5; -webkit-transition: all 1s; -o-transition: all 1s; transition: all 1s; border: 0; border-radius: 0;}
+.bc-div{margin:.5rem 0 2rem 0;padding:1.5rem 0 .1rem 0;background-color:#000;}
+.breadcrumbs {margin:0 0 1.5rem 4rem;padding:0;color:#2d8bf0;background-color:#000!important;}
+.breadcrumbs li{display:inline;}
+.breadcrumbs a{color:#6298d3;text-decoration:none;}
+.breadcrumbs a:hover{color:#fff;text-decoration:underline;}
+.copyright {font-size:80%; color:white;padding-bottom:1em;}
+.red{color:red;}
+.mb-1{margin-bottom:1rem!important;}
+.mb-4{margin-bottom:4rem;}
+#cir-footer-wrapper {text-align:center;}
+#cir-footer-wrapper a {color:#3d99fd;}
+#cir-footer-wrapper a:hover {color:white;}
+#cir-footer-menu {margin:0; padding-left:0; font-size:1em; text-align:center; background-color:black; padding-bottom:0px; position:fixed; bottom:0; width:100%;}
+#footer-menu li {display:inline; margin:0; padding-left:0; background-image:none;}
 #reset{margin-left:5px;display:inline-block;}
 #err{color:red;text-align:center;font-weight: bold;}
 #total{font-size:18px;}

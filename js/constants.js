@@ -1,6 +1,13 @@
 const qryStr = window.location.search;
+let domain
+if(location.hostname == "artoftech") {
+    // HOST = 'localhost:3000';
+    domain = 'http://artoftech:8888/';
+} else {
+    // HOST = 'https://artoftechllc.com:3000';
+    domain = 'https://projects.theartoftechllc.com/';
+}
 const HOST = 'localhost:3000';
-const domain = 'http://artoftech:8888';
 const noaa = 'https://oceanexplorer.noaa.gov'
 const filterButton=document.getElementById("adv-search");
 const searchButton=document.getElementById("new-search");

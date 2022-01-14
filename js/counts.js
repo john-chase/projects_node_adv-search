@@ -84,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(() => {
             console.log('Stats loaded successfully')
         })
-        .catch(err => console.log('ERROR loading stats!'))
+        .catch(err => {
+            console.log('ERROR loading stats!')
+        })
     }
 });

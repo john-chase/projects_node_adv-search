@@ -72,10 +72,31 @@ function getLookups() {
 //populate the lookups after DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     if(!qryStr) {
+        const totalDiv=document.getElementById("total");
+        const advSearchBtn=document.getElementById("adv-search");
+        const resetBtn=document.getElementById("reset");
         getLookups()
         .then(() => {
             console.log('Lookups loaded successfully')
+            totalDiv.innerHTML=`
+                <fieldset>
+                    <legend><i class="fas fa-balance-scale"></i> Filtered expeditions:</legend>
+                    <span id="total-expedition-stat" class="oval" title="Total Expeditions"></span><!-- for stat --></span>&nbsp;
+                    <span id="filtered-expedition-stat" class="oval nonzero" title="Filtered expeditions"></span><!-- for stat --></span>
+                </fieldset>
+                `
+                advSearchBtn.classList.remove("hidden")
+                advSearchBtn.classList.add("visible")
+                reset.classList.remove("hidden")
+                reset.classList.add("visible")
         })
-        .catch(err => console.log('ERROR loading lookups!'))
+        .catch(err => {
+            console.log('ERROR loading lookups!')
+            totalDiv.innerHTML=`                
+            <fieldset>
+                <legend><i class="fas fa-hourglass-end"></i> Server Asleep 💤 </legend>
+                <p class="red">Please check back later. We make our best effort to keep this app running but it isn't a 24-7 affair.</p>
+            </fieldset>`
+        })        
     }
 });

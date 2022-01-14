@@ -1,5 +1,7 @@
 /******SETUP******/
 //required packages
+const https = require('https');
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
@@ -7,16 +9,20 @@ const chalk = require('chalk');
 const app = express();
 console.clear();
 
+const options = {
+  key: fs.readFileSync('/Users/chases/Certificates/artoftech.key'),
+  cert: fs.readFileSync('/Users/chases/Certificates/artoftech.crt'),
+};
+
 //use ENV for DEV
-if (process.env.NODE_ENV !== 'production') {
+// if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
   console.log(chalk.white.inverse("\nENV Variables:"))
   console.log('DB_HOST: '+process.env.DB_HOST)
   console.log('DB_PORT: '+process.env.DB_PORT)
   console.log('DB_USER: '+process.env.DB_USER)
-  console.log('DB_USER: '+process.env.DB_PASSWORD)
   console.log('DB_DATABASE: '+process.env.DB_DATABASE+"\n")
-}
+// }
 
 // parse application/json
 app.use(bodyParser.json());
@@ -336,9 +342,12 @@ app.use((error, req, res, next) => {
 });
 
 /******SERVER******/
-const serverPort = process.env.PORT || 3000
-app.listen(serverPort, () => {
-  console.log(chalk.white.inverse('HTTP server started on port '+serverPort+'...\n'));
+// const serverPort = process.env.PORT || 3000
+// https.createServer(options, app).listen(3000, '0.0.0.0', () => {
+//   console.log('Server listening on port 3000!');
+// });
+app.listen(3000, '0.0.0.0', () => {
+  console.log(chalk.white.inverse('HTTP server started on port 3000...\n'));
 });
 
 // REFERENCE: http://mfikri.com/en/blog/nodejs-restful-api-mysql
