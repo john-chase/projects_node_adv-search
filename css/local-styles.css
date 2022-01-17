@@ -42,7 +42,7 @@ hr{margin:1.5rem 0 3rem 0}
 #cir-footer-wrapper {text-align:center;}
 #cir-footer-wrapper a {color:#3d99fd;}
 #cir-footer-wrapper a:hover {color:white;}
-#cir-footer-menu {margin:0; padding-left:0; font-size:1em; text-align:center; background-color:black; padding-bottom:0px; position:fixed; bottom:0; width:100%;}
+#cir-footer-menu {margin:0; padding-top:1rem; font-size:1em; text-align:center; background-color:black;position:fixed; bottom:0; width:100%;}
 #footer-menu li {display:inline; margin:0; padding-left:0; background-image:none;}
 #reset{margin-left:5px;display:inline-block;}
 #err{color:red;text-align:center;font-weight: bold;}
