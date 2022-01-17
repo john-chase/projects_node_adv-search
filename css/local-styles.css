@@ -33,7 +33,7 @@ hr{margin:1.5rem 0 3rem 0}
 .bc-div{margin:.5rem 0 2rem 0;padding:1.5rem 0 .1rem 0;background-color:#000;}
 .breadcrumbs {margin:0 0 1.5rem 4rem;padding:0;color:#2d8bf0;background-color:#000!important;}
 .breadcrumbs li{display:inline;}
-.breadcrumbs a{color:#6298d3;text-decoration:none;}
+.breadcrumbs a{color:#2d8bf0;text-decoration:none;}
 .breadcrumbs a:hover{color:#fff;text-decoration:underline;}
 .copyright {font-size:80%; color:white;padding-bottom:1em;}
 .red{color:red;}
