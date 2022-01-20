@@ -56,7 +56,7 @@ function get(table, sort, fa) {
     let id = 'id';
     if(table==='Years') {id=lookup}
     if(table==='Locations') {name='loc';}
-    return fetch('http://'+HOST+'/api/expeditions/lookup'+table+'/0/'+sort)
+    return fetch('//'+HOST+'/api/expeditions/lookup'+table+'/0/'+sort)
     .then((response) => response.json())
     .then (data => appendLookup(data, lookup, name, id, fa))
     .catch(err => {document.getElementById("err").innerHTML=errMsg;

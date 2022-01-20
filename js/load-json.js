@@ -16,7 +16,7 @@ filterButton.addEventListener('click', () => {
     if(topics) endpoint+='&topics='+topics;
     if(types) endpoint+='&types='+types;
     if(explorers) endpoint+='&explorers='+explorers;
-    endpoint="http://"+HOST+"/api/expeditions/advSearch?1=1"+(endpoint)
+    endpoint="//"+HOST+"/api/expeditions/advSearch?1=1"+(endpoint)
     caller="Search Button - clicked";
     if(debug) {console.log("Endpoint (search button): "+(endpoint))}
     fetchRecords(endpoint, mainContainer, caller);
@@ -31,7 +31,7 @@ filterButton.addEventListener('click', () => {
 //     mDiv.classList.add("col-md-9");
 //     mainContainer.innerHTML='';
 //     pagination.innerHTML='';
-//     endpoint="http://"+HOST+"/api/expeditions/advSearch?1=1";
+//     endpoint="//"+HOST+"/api/expeditions/advSearch?1=1";
 //     caller="new_search no parameter";
 //     window.history.pushState(null, null, window.location.pathname);
 //     getLookups()
@@ -150,7 +150,7 @@ async function translate2Eng(qryStr) {
 
 //Convert ids to values
 async function fetchLookupValues(table, ids) {
-    const response = await fetch('http://'+HOST+'/api/expeditions/lookup'+table+'/'+ids+'/asc/', {});
+    const response = await fetch('//'+HOST+'/api/expeditions/lookup'+table+'/'+ids+'/asc/', {});
     const data = await response.json();
     let values = '';
     switch (table) {
@@ -180,7 +180,7 @@ async function fetchLookupValues(table, ids) {
 if(qryStr) {
     pDiv.classList.toggle("hidden");
     mDiv.classList.remove("col-md-9");
-    const endpoint="http://"+HOST+"/api/expeditions/advSearch?1=1"+(qryStr.replace('?', "&"));
+    const endpoint="//"+HOST+"/api/expeditions/advSearch?1=1"+(qryStr.replace('?', "&"));
     if(debug) {console.log("Endpoint (query string): "+endpoint)}
     caller="query_string parameter";
     fetchRecords(endpoint, mainContainer, caller);

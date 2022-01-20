@@ -182,12 +182,11 @@ function appendFilterStat(data) {
     //change the color to red for 0 and green for non zero
     if (elemInner === 0){filterStat.classList.add("zero")} else {filterStat.classList.remove("zero")}
 }
-
 //fetch count content from DB - step3
 function getFilterTotal(query) {
     if(debug){console.log(query)}
     //build endpoint for fetching from index.js:countAll
-    const url = 'http://'+HOST+'/api/expeditions/countAll/'+query;
+    const url = '//'+HOST+'/api/expeditions/countAll/'+query;
     return fetch(url)
     .then((response) => response.json())
     .then (data => appendFilterStat(data,'total'))

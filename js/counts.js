@@ -18,10 +18,10 @@ function getTotal(table, num=0) {
     let attr = '';
     let url = '';
     if(num===0){
-        url = 'http://'+HOST+'/api/expeditions/count'+table+'s';
+        url = '//'+HOST+'/api/expeditions/count'+table+'s';
         attr = 'total-'+table.toLowerCase()
     } else {
-        url = 'http://'+HOST+'/api/expeditions/count'+table+'s/'+num;
+        url = '//'+HOST+'/api/expeditions/count'+table+'s/'+num;
         attr = table.toLowerCase()+'-'+num
     }
     return fetch(url)
